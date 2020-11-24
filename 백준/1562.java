@@ -1,4 +1,4 @@
-// 1562 계단수 
+// 1562 계단수  비트마스킹 
 
 import java.util.*;
 import java.io.*;
