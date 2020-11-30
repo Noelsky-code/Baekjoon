@@ -43,7 +43,7 @@ public class Main {
                 return arr[now][0];
             }
             else{
-                return 10000001;//방문 할수 없을 경우 매우 큰값 리턴
+                return 10000001;//방문 할수 없을 경우 매우 큰 값 리턴
             }
         }
         
