@@ -1,4 +1,4 @@
-// 1305,광고 
+// 1305,광고 , kmp 알고리즘 활용 
 
 import java.util.*;
 import java.io.*;
