@@ -44,6 +44,8 @@ public class Main {
         
     }
     static void find_cycle(int root,int from,int[] arr,HashSet<Integer> set,LinkedList<Integer> list){//dfs 방식 , 싸이클을 확인함  
+        
+        
         if(set.contains(arr[from])){// 만약 이미 사이클이 형성된 곳을 연결하려고 하면
             return;     
         }
@@ -55,6 +57,8 @@ public class Main {
             }
             return;
         }
+
+        if(list.contains(arr[from]))return; //만약 방문했던곳을 또 가려고 한다면. 
 
         list.add(arr[from]);
         find_cycle(root,arr[from],arr,set,list);
