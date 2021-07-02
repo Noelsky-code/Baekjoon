@@ -36,8 +36,8 @@ public class Main {
                     break;
                 } 
                 else if(!check(blue)&&poll.cnt+1<=9){//파란공이 안빠졋을 때
-                    if(red.row==blue.row&&red.col==blue.col){//둘이 겹쳐버릴때 .. 흠 ... 
-
+                    if(red.row==blue.row&&red.col==blue.col){//둘이 겹쳐버릴때 .. 흠 ... , 하드 코딩 
+                        move_one(i,poll,red,blue);//겹침 처리 
                     } 
                     queue.add(new Balls(red,blue,poll.cnt+1));
                 }
@@ -45,6 +45,42 @@ public class Main {
             
         }
         System.out.println(answer);
+    }
+    static void move_one(int i, Balls poll, Ball red, Ball blue){
+        if(i==0){
+            if(poll.red.col<poll.blue.col){
+                blue.col++;
+            }
+            else{
+                red.col++;
+            }
+        }
+        else if(i==1){
+            if(poll.red.col<poll.blue.col){
+                red.col--;
+            }
+            else{
+                blue.col--;
+            }
+        }
+        else if(i==2){
+            if(poll.red.row<poll.blue.row){
+                blue.row++;
+            }
+            else{
+                red.row++;
+            }
+        }
+        else if(i==3){
+            if(poll.red.row<poll.blue.row){
+                red.row--;
+            }
+            else{
+                blue.row--;
+            }
+
+        }
+
     }
     static boolean check(Ball ball){//구멍인지 아닌지 체크 
     
