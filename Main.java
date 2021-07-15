@@ -5,10 +5,12 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
-    // 21939, 문제 추천 시스템 version1 
+    // 21944, 문제 추천 시스템 version 2 
     // Priority 큐 이용 -> add , recommend는 nlogn 안에 모두 해결가능
     // 삭제 -> n^2 -> 시간 초과 예상 -> set을 이용해서 해결
     // solve 한 후 같은 문제를 다시 add 할 떄 예외 사항 발생가능  
+    // Group의 경우 Map하나 더 만들어서 indexing 후 여러 우선순위 큐 만들어 해결  
+    // recommend 3의 경우 난이도 별로 우선순위 큐를 만들어 해결?흠 ...가장 간단한 풀이법.   
     public static void main(String[] args) throws IOException {
     
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
